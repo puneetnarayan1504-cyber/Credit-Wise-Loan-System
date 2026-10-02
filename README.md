@@ -1,5 +1,17 @@
 # Credit Wise Loan System
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3-blue?logo=python">
+  <img src="https://img.shields.io/badge/Machine-Learning-orange">
+  <img src="https://img.shields.io/badge/Scikit--learn-ML-yellow?logo=scikitlearn">
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen">
+</p>
+
+<p align="center">
+  A Machine Learning project for loan approval prediction
+  using applicant and financial information.
+</p>
+
 A machine-learning classification project that explores applicant and financial information to predict the `Loan_Approved` target.
 
 ## Project overview
