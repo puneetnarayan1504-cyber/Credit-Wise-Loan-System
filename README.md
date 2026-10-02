@@ -59,7 +59,7 @@ The dataset contains applicant and loan-related fields such as applicant income,
 
 ```text
 Credit-Wise-Loan-System/
-├── CreditWise_Loan_System.ipynb
+├── CreditWise_Loan_System(2).ipynb
 ├── loan_approval_data.csv
 ├── README.md
 └── requirements.txt
@@ -85,9 +85,21 @@ Credit-Wise-Loan-System/
 
 Keep the notebook and CSV file in the same folder so that `pd.read_csv("loan_approval_data.csv")` can find the dataset.
 
-## Evaluation
+ ## Model Evaluation
 
-The notebook reports precision, recall, F1-score, accuracy, and a confusion matrix for each classifier. Review these metrics together when comparing models; accuracy alone may not describe performance adequately, especially if the target classes are imbalanced.
+Three machine learning models were evaluated before and after feature engineering using Accuracy, Precision, Recall, and F1-score.
+
+### Performance After Feature Engineering
+
+| Model                     | Accuracy | Precision | Recall | F1-Score |
+| ------------------------- | -------: | --------: | -----: | -------: |
+| Logistic Regression       |    87.5% |    79.03% | 80.33% |   79.67% |
+| K-Nearest Neighbors (KNN) |    75.5% |    62.00% | 50.82% |   55.86% |
+| Gaussian Naive Bayes      |    86.5% |    78.33% | 77.05% |   77.69% |
+
+Based on the reported test results, Logistic Regression achieved the highest accuracy, recall, and F1-score after feature engineering, and was selected as the final model.
+
+These results are specific to this dataset and test split. Further validation is required before using the model for real-world decisions.
 
 ## Important note
 
