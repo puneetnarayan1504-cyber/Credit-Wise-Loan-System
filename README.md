@@ -1,0 +1,87 @@
+# Credit Wise Loan System
+
+A machine-learning classification project that explores applicant and financial information to predict the `Loan_Approved` target.
+
+## Project overview
+
+This project uses a Jupyter Notebook to perform data cleaning, exploratory data analysis (EDA), categorical encoding, feature scaling, model training, and evaluation for a loan approval classification task.
+
+## Dataset
+
+- File: `loan_approval_data.csv`
+- Rows: 1,000
+- Columns: 20
+- Target column: `Loan_Approved`
+
+The dataset contains applicant and loan-related fields such as applicant income, co-applicant income, employment status, age, credit score, existing loans, debt-to-income ratio, savings, collateral value, loan amount, loan term, loan purpose, property area, education level, gender, and employer category.
+
+## Workflow in the notebook
+
+1. Load the dataset with Pandas.
+2. Inspect the data and handle missing values:
+   - Numerical columns: mean imputation.
+   - Categorical columns: most-frequent-value imputation.
+3. Explore the data using Matplotlib and Seaborn visualizations.
+4. Drop the `Applicant_ID` field.
+5. Encode categorical features using Label Encoding and One-Hot Encoding.
+6. Review feature correlations.
+7. Split the data into training and test sets (80:20, `random_state=42`).
+8. Standardize features using `StandardScaler`.
+9. Train and evaluate:
+   - Logistic Regression
+   - K-Nearest Neighbors (kNN, k=5)
+   - Gaussian Naive Bayes
+10. Add squared features for `DTI_Ratio` and `Credit_Score`, then repeat model training and evaluation.
+
+## Technologies and libraries
+
+- Python
+- Jupyter Notebook
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+
+## Repository structure
+
+```text
+Credit-Wise-Loan-System/
+├── CreditWise_Loan_System.ipynb
+├── loan_approval_data.csv
+├── README.md
+└── requirements.txt
+```
+
+## Run locally
+
+1. Clone or download this repository.
+2. Open a terminal in the project folder.
+3. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Start Jupyter:
+
+   ```bash
+   jupyter notebook
+   ```
+
+5. Open `CreditWise_Loan_System.ipynb` and run the cells from top to bottom.
+
+Keep the notebook and CSV file in the same folder so that `pd.read_csv("loan_approval_data.csv")` can find the dataset.
+
+## Evaluation
+
+The notebook reports precision, recall, F1-score, accuracy, and a confusion matrix for each classifier. Review these metrics together when comparing models; accuracy alone may not describe performance adequately, especially if the target classes are imbalanced.
+
+## Important note
+
+This is an educational machine-learning project. Its predictions should not be used as the sole basis for real loan approval or credit decisions. Real lending decisions require validated data, fairness checks, explainability, regulatory compliance, and human review.
+
+## Author
+
+**Puneet Narayan**
+
